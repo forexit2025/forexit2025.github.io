@@ -1,0 +1,1 @@
+Note: this is just a "template" of sorts that i think would be good - cos if this is meant to be scalable, lowkey if we just have a folder of all the data, we just need to format it and for future directors, even if they don't do cs, all they need to do is update the information in the data folder (just follow the provided format in the files)
