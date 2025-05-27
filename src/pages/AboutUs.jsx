@@ -30,7 +30,7 @@ function AboutUsPage() {
         </button>
       </div>
       <div
-        className="flex flex-col justify-center items-center bg-no-repeat bg-cover w-full min-h-[50vh]"
+        className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
         style={{ backgroundImage: `url(${AboutUsFrame})` }}
       >
         {createSection({
