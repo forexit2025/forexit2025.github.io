@@ -6,18 +6,36 @@ import YearNavigator from "../components/YearNavigator";
 function EventsPage() {
   const navigate = useNavigate();
   const [year, setYear] = React.useState("2025");
+  const [searchUpcoming, setSearchUpcoming] = React.useState("");
+  const [searchPast, setSearchPast] = React.useState("");
 
-  const upcoming = events.filter((e) => e.type === "upcoming" && e.year === year);
-  const past = events.filter((e) => e.type === "past" && e.year === year);
+  const upcoming = events
+    .filter((e) => e.type === "upcoming" && e.year === year)
+    .filter((e) => e.name.toLowerCase().includes(searchUpcoming.toLowerCase()))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const past = events
+    .filter((e) => e.type === "past" && e.year === year)
+    .filter((e) => e.name.toLowerCase().includes(searchPast.toLowerCase()))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const createEventGrid = (array, type) => {
     return (
       <div className="flex flex-col items-start w-full space-y-2">
         <h3 className="text-2xl font-bold">{type === "upcoming" ? "Upcoming" : "Past"} Events</h3>
+        <div className="pl-2 pr-4 flex bg-[#F1F7FF] rounded-4xl w-[50vw] justify-between items-center">
+          <input
+            type="text"
+            placeholder="search for events"
+            className="p-2 w-[100%] rounded-4xl text-black typing-placeholder focus:outline-none"
+            value={type === "upcoming" ? searchUpcoming : searchPast}
+            onChange={(e) => (type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value))}
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
         <div className="flex flex-row overflow-x-auto whitespace-nowrap gap-4">
           {array && array.length > 0 ? (
-            array.map((e) => (
-              <div key={e.name} className="flex-shrink-0">
+            array.map((e, index) => (
+              <div key={index} className="flex-shrink-0">
                 <img src={e.cp} alt={e.name} className="w-full h-[150px] object-cover rounded" />
                 <p>{e.name}</p>
               </div>
