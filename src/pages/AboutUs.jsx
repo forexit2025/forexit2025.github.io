@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Execs2025 from "../assets/images/execs2025.png";
+import AboutUsFrame from "../assets/images/about-us-frame.png";
+import AboutUs1 from "../assets/images/about-us-1.png";
+import AboutUs2 from "../assets/images/about-us-2.png";
 
 function AboutUsPage() {
   const navigate = useNavigate();
@@ -26,11 +29,14 @@ function AboutUsPage() {
           go to HOME
         </button>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div
+        className="flex flex-col justify-center items-center bg-no-repeat bg-cover w-full min-h-[50vh]"
+        style={{ backgroundImage: `url(${AboutUsFrame})` }}
+      >
         {createSection({
-          headerstyle: "text-5xl font-bold",
+          headerstyle: "text-white text-5xl font-bold",
           header: "About Us",
-          paragraphstyle: "text-md text-center",
+          paragraphstyle: "text-white text-md text-center",
           paragraph: `At the UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of
           their professional journey with intentional, impactful development. We are a newly founded society,
           established in March 2025, born out of a passion for breaking down the barriers to financial literacy and
@@ -38,23 +44,29 @@ function AboutUsPage() {
         })}
       </div>
       <div className="flex flex-col justify-center items-center">
-        {createSection({
-          headerstyle: "text-3xl font-bold",
-          header: "Our Mission",
-          paragraphstyle: "text-md text-center",
-          paragraph: (
-            <>
-              <p className="text-[#004AAD] font-bold italic">Our purpose is simple: Accessibility</p>
-              <p>
-                FXA exists as a conduit to connect UNSW’s  broader student body with the world of finance, helping to
-                break down barriers for students regardless of their background, degree or prior experience. As a
-                fledgling society we are uniquely placed to respond to the growing focus for career development and
-                financial literacy amongst university students and most importantly help to shine a light on the often
-                overlooked cornerstone of the global economy that Foreign Exchange has become.
-              </p>
-            </>
-          ),
-        })}
+        <div>
+          {createSection({
+            headerstyle: "text-3xl text-center font-bold",
+            header: "Our Mission",
+            paragraphstyle: "text-md text-center",
+            paragraph: (
+              <>
+                <p className="text-[#004AAD] font-bold italic">Our purpose is simple: Accessibility</p>
+                <p>
+                  FXA exists as a conduit to connect UNSW’s  broader student body with the world of finance, helping to
+                  break down barriers for students regardless of their background, degree or prior experience. As a
+                  fledgling society we are uniquely placed to respond to the growing focus for career development and
+                  financial literacy amongst university students and most importantly help to shine a light on the often
+                  overlooked cornerstone of the global economy that Foreign Exchange has become.
+                </p>
+              </>
+            ),
+          })}
+        </div>
+        <div className="flex flex-row justify-center items-center gap-10">
+          <img src={AboutUs1} alt="Activity 1" className="w-[30%] h-auto object-cover" />
+          <img src={AboutUs2} alt="Activity 2" className="w-[30%] h-auto object-cover" />
+        </div>
       </div>
       <div className="flex flex-col justify-center items-center">
         {createSection({
