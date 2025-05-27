@@ -25,22 +25,6 @@ export const events = [
     description: "test description",
     cp: Blank,
     link: "",
-    type: "upcoming",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "upcoming",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
     type: "past",
   },
   {

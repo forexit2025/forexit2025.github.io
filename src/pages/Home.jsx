@@ -4,6 +4,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   // use info objects from the data folder ...
+  // use "Card" component if needed
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">

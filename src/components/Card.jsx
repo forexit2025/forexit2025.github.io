@@ -6,7 +6,7 @@ function Card({ array }) {
       {array && array.length > 0 ? (
         array.map((o, index) => (
           <div key={index} className="flex-shrink-0">
-            <img src={o.cp} alt={o.name} className="w-full h-[150px] object-cover rounded" />
+            <img src={o.cp} alt={o.name} className="w-full h-[200px] object-cover rounded" />
             <p>{o.name}</p>
           </div>
         ))
