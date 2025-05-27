@@ -5,6 +5,7 @@ function OurTeamPage() {
   const navigate = useNavigate();
 
   // "team" will have all the info of everyone in the soc...
+  // use "YearNavigator" for the year buttons
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
