@@ -1,11 +1,13 @@
+import DirectorRecruitment2025 from "../assets/events/DirectorRecruitment2025.jpg";
+
 export const events = [
   // these are formated data
   {
-    name: "tba",
+    name: "UNSW Forex Association 2025 Director Recruitment",
     year: "2025",
-    description: "some decription",
-    cp: "some image url",
-    link: "clicking on the event div (any of the above components will send user to fb event page",
-    type: "either 'past' or 'upcoming'",
+    description: "Challenge yourself, take initiative, and be part of something bold!",
+    cp: DirectorRecruitment2025,
+    link: "https://fb.me/e/5nFCgMTuA",
+    type: "past",
   },
 ];

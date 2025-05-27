@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 function HomePage() {
   const navigate = useNavigate();
 
+  // use info objects from the data folder ...
+
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
       <h1 className="text-2xl font-bold mb-4">UNSW FOREX Association</h1>
