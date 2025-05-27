@@ -1,5 +1,4 @@
-import { useNavigate } from "react-router-dom";
-import { events } from "../data/eventsinfo";
+import React from "react";
 
 function YearNavigator({ year, setYear }) {
   const years = () => {
@@ -12,6 +11,10 @@ function YearNavigator({ year, setYear }) {
     return array;
   };
 
+  React.useEffect(() => {
+    console.log("Year updated to:", year);
+  }, [year]);
+
   return (
     <div className="flex flex-row justify-center gap-3">
       {years &&
@@ -19,7 +22,7 @@ function YearNavigator({ year, setYear }) {
           <button
             key={i}
             onClick={() => setYear(yr)}
-            className={`${yr === year ? "bg-[linear-gradient(#54C8D5,#399CE2)]" : "bg-[#AEAEAE]"} text-white`}
+            className={`text-white ${yr === year ? "bg-[linear-gradient(#54C8D5,#399CE2)]" : "bg-[#AEAEAE]"}`}
           >
             {yr}
           </button>

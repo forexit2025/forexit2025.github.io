@@ -50,8 +50,6 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
-  background: linear-gradient(to right, #54c8d5, #399ce2);
-  color: white;
 }
 button:hover {
   border-color: #646cff;

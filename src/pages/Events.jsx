@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { events } from "../data/eventsinfo";
 import YearNavigator from "../components/YearNavigator";
+import Card from "../components/Card";
 
 function EventsPage() {
   const navigate = useNavigate();
@@ -30,20 +31,9 @@ function EventsPage() {
             value={type === "upcoming" ? searchUpcoming : searchPast}
             onChange={(e) => (type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value))}
           />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div className="flex flex-row overflow-x-auto whitespace-nowrap gap-4">
-          {array && array.length > 0 ? (
-            array.map((e, index) => (
-              <div key={index} className="flex-shrink-0">
-                <img src={e.cp} alt={e.name} className="w-full h-[150px] object-cover rounded" />
-                <p>{e.name}</p>
-              </div>
-            ))
-          ) : (
-            <div className="h-[50px]">Coming Soon!</div>
-          )}
-        </div>
+        <Card array={array} />
       </div>
     );
   };

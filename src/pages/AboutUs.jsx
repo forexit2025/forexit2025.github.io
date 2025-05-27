@@ -68,6 +68,7 @@ function AboutUsPage() {
           Together, we’ll drive real growth, foster lasting connections and deliver measurable impact for sponsors,
           members and the broader student body.`,
           button: "View Our Events",
+          buttonstyle: "text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
         })}
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center">
@@ -83,7 +84,8 @@ function AboutUsPage() {
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </>
             ),
-            buttonstyle: "flex flex-row gap-4 justify-center items-center",
+            buttonstyle:
+              "flex flex-row gap-4 justify-center items-center text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
           })}
         </div>
         <img src={Execs2025} alt="2025 Executives" className="w-[50%] h-auto object-cover" />
