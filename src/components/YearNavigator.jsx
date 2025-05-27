@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { events } from "../data/eventsinfo";
 
-function YearNavigator({ year }) {
+function YearNavigator({ year, setYear }) {
   const years = () => {
     const array = ["2025", "2026", "2027", "2028"];
     // const array = [];
@@ -13,7 +13,7 @@ function YearNavigator({ year }) {
   };
 
   return (
-    <div className="flex flex-row gap-3">
+    <div className="flex flex-row justify-center gap-3">
       {years &&
         years().map((yr, i) => (
           <button
