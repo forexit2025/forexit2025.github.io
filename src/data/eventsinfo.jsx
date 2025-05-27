@@ -1,4 +1,4 @@
-import Blank from "../assets/blank.png";
+import Blank from "../assets/cp/blank.png";
 import DirectorRecruitment2025 from "../assets/cp/events/DirectorRecruitment2025.jpg";
 
 export const events = [
