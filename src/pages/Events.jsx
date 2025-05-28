@@ -4,6 +4,8 @@ import { events } from "../data/eventsinfo";
 import YearNavigator from "../components/YearNavigator";
 import Card from "../components/Card";
 import EventsFrame from "../assets/images/events-frame.png";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function EventsPage() {
   const navigate = useNavigate();
@@ -48,27 +50,20 @@ function EventsPage() {
   return (
     <>
       <div className="w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-auto">
-        <div className="h-[10vh] flex justify-between items-center bg-gray-100">
-          <p>fake nav bar</p>
-          <div className="flex flex-row justify-center items-center space-x-2">
-            <p className="text-lg">under construction</p>
-            <i className="fa fa-wrench text-xl"></i>
+        <Header />
+        <div className="pt-[180px]">
+          <div
+            className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
+            style={{ backgroundImage: `url(${EventsFrame})` }}
+          >
+            <h1 className="text-white text-5xl font-bold">Our Events</h1>
+            <h3 className="text-white text-2xl font-bold">Stay updated with what's on at FXA!</h3>
           </div>
-          <button className="bg-black text-white" onClick={() => navigate("/")}>
-            go to HOME
-          </button>
-        </div>
-        <div
-          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
-          style={{ backgroundImage: `url(${EventsFrame})` }}
-        >
-          <h1 className="text-white text-5xl font-bold">Our Events</h1>
-          <h3 className="text-white text-2xl font-bold">Stay updated with what's on at FXA!</h3>
         </div>
         <YearNavigator year={year} setYear={setYear} />
         {upcoming && createEventGrid(upcoming, "upcoming")}
         {past && createEventGrid(past, "past")}
-        <div className="h-[10vh] flex justify-center items-center bg-gray-100">fake footer</div>
+        <Footer />
       </div>
     </>
   );

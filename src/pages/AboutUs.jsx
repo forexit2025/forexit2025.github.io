@@ -3,6 +3,8 @@ import Execs2025 from "../assets/images/execs2025.png";
 import AboutUsFrame from "../assets/images/about-us-frame.png";
 import AboutUs1 from "../assets/images/about-us-1.png";
 import AboutUs2 from "../assets/images/about-us-2.png";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function AboutUsPage() {
   const navigate = useNavigate();
@@ -19,29 +21,22 @@ function AboutUsPage() {
 
   return (
     <div className="w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-auto">
-      <div className="h-[10vh] flex justify-between items-center bg-gray-100">
-        <p>fake nav bar</p>
-        <div className="flex flex-row justify-center items-center space-x-2">
-          <p className="text-lg">under construction</p>
-          <i className="fa fa-wrench text-xl"></i>
+      <Header />
+      <div className="pt-[180px]">
+        <div
+          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
+          style={{ backgroundImage: `url(${AboutUsFrame})` }}
+        >
+          {createSection({
+            headerstyle: "text-white text-5xl font-bold",
+            header: "About Us",
+            paragraphstyle: "text-white text-md text-center",
+            paragraph: `At the UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of
+            their professional journey with intentional, impactful development. We are a newly founded society,
+            established in March 2025, born out of a passion for breaking down the barriers to financial literacy and
+            empowering students across all disciplines.`,
+          })}
         </div>
-        <button className="bg-black text-white" onClick={() => navigate("/")}>
-          go to HOME
-        </button>
-      </div>
-      <div
-        className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
-        style={{ backgroundImage: `url(${AboutUsFrame})` }}
-      >
-        {createSection({
-          headerstyle: "text-white text-5xl font-bold",
-          header: "About Us",
-          paragraphstyle: "text-white text-md text-center",
-          paragraph: `At the UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of
-          their professional journey with intentional, impactful development. We are a newly founded society,
-          established in March 2025, born out of a passion for breaking down the barriers to financial literacy and
-          empowering students across all disciplines.`,
-        })}
       </div>
       <div className="flex flex-col justify-center items-center">
         <div>
@@ -102,7 +97,7 @@ function AboutUsPage() {
         </div>
         <img src={Execs2025} alt="2025 Executives" className="w-[50%] h-auto object-cover" />
       </div>
-      <div className="h-[10vh] flex justify-center items-center bg-gray-100">fake footer</div>
+      <Footer />
     </div>
   );
 }

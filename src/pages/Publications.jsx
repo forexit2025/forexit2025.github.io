@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { blogs, newsletters } from "../data/publicationsinfo";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function PublicationsPage() {
   const navigate = useNavigate();
@@ -7,7 +9,8 @@ function PublicationsPage() {
   // "blogs" and "newsletters" will have all the info of any blogs and newsletters to post/publish ...
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center">
+    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+      <Header />
       <h1 className="text-2xl font-bold mb-4">UNSW FOREX Association</h1>
       <h3 className="text-2xl font-bold mb-4">
         This is the <b>PUBLICATIONS PAGE</b>... make edits...
@@ -19,6 +22,7 @@ function PublicationsPage() {
         <p className="text-lg">under construction</p>
         <i className="fa fa-wrench text-xl"></i>
       </div>
+      <Footer />
     </div>
   );
 }

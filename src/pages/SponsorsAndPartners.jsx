@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { sponsors, partners } from "../data/sponsorsandpartnersinfo";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function SponsorsAndPartnersPage() {
   const navigate = useNavigate();
@@ -7,7 +9,8 @@ function SponsorsAndPartnersPage() {
   // "sponsors" and "partners" will have all the info of our sponsors and partners ...
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center">
+    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+      <Header />
       <h1 className="text-2xl font-bold mb-4">UNSW FOREX Association</h1>
       <h3 className="text-2xl font-bold mb-4">
         This is the <b>SPONSORS AND PARTNERS PAGE</b>... make edits...
@@ -19,6 +22,7 @@ function SponsorsAndPartnersPage() {
         <p className="text-lg">under construction</p>
         <i className="fa fa-wrench text-xl"></i>
       </div>
+      <Footer />
     </div>
   );
 }
