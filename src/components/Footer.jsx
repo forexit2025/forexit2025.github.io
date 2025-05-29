@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-[1440px] h-[119px] mx-auto flex flex-col items-center justify-center relative">
+    <footer className="w-[1440px] h-[80px] mx-auto flex flex-col items-center justify-center relative">
       {/* Top Line */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2"
@@ -14,7 +14,7 @@ const Footer = () => {
       />
 
       {/* Centered Logo */}
-      <div className="w-[482.26px] h-[76px]">
+      <div className="w-[400px] h-[76px]">
         <img
           src="website/src/assets/headandfoot/footer.png"
           alt="Logo"
