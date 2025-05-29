@@ -4,8 +4,8 @@ import { events } from "../data/eventsinfo";
 import YearNavigator from "../components/YearNavigator";
 import Card from "../components/Card";
 import EventsFrame from "../assets/images/events-frame.png";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function EventsPage() {
   const navigate = useNavigate();

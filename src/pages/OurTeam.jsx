@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { team } from "../data/teaminfo";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function OurTeamPage() {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ function OurTeamPage() {
   // use "YearNavigator" for the year buttons
 
   return (
-    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center overflow-x-hidden overflow-y-auto">
       <Header />
       <h1 className="text-2xl font-bold mb-4">UNSW FOREX Association</h1>
       <h3 className="text-2xl font-bold mb-4">

@@ -3,8 +3,8 @@ import Execs2025 from "../assets/images/execs2025.png";
 import AboutUsFrame from "../assets/images/about-us-frame.png";
 import AboutUs1 from "../assets/images/about-us-1.png";
 import AboutUs2 from "../assets/images/about-us-2.png";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function AboutUsPage() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ function AboutUsPage() {
   return (
     <div className="w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-auto">
       <Header />
-      <div className="pt-[180px]">
+      <div className="pt-[150px]">
         <div
           className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
           style={{ backgroundImage: `url(${AboutUsFrame})` }}
