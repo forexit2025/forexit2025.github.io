@@ -1,26 +1,42 @@
-import { useNavigate } from "react-router-dom";
 import { sponsors, partners } from "../data/sponsorsandpartnersinfo";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import fxaImage from "../assets/images/sponsor-page-background.png";
 
 function SponsorsAndPartnersPage() {
-  const navigate = useNavigate();
-
   // "sponsors" and "partners" will have all the info of our sponsors and partners ...
 
   return (
-    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+    <div className="w-screen min-h-screen">
       <Header />
-      <h1 className="text-2xl font-bold mb-4">UNSW FOREX Association</h1>
-      <h3 className="text-2xl font-bold mb-4">
-        This is the <b>SPONSORS AND PARTNERS PAGE</b>... make edits...
-      </h3>
-      <button className="mt-2 mb-6" onClick={() => navigate("/")}>
-        click me to go to HOME
-      </button>
-      <div className="flex flex-row items-center space-x-2">
-        <p className="text-lg">under construction</p>
-        <i className="fa fa-wrench text-xl"></i>
+      <div className="p-20">
+        <section className="flex flex-row justify-center items-center mt-30">
+          <img src={fxaImage} alt="FXA Logo Image" className="w-3/5"/>
+          <div className="p-16 pr-0">
+            <h1 className="text-5xl font-bold mb-6">Our Sponsors and Partners</h1>
+            <p className="text-lg font-medium mb-6">
+              Our sponsors and partners play a crucial role in the way we operate. Together let’s make big things happen!
+            </p>
+            <p className="mb-4 text-[#828282]">
+              Find out more about us below!
+            </p>
+            {/* TODO: insert prospectus link */}
+            <button className="text-white bg-black w-full">
+              Download Our Prospectus
+            </button>
+          </div>
+        </section>
+        {/* Sponsors */}
+        <section className="py-14">
+          <h2 className="text-xl font-bold pb-6">Our Sponsors</h2>
+          <p className="text-[#828282]">Coming Soon!</p>
+        </section>
+        <hr className="w-1/4 text-gray-300"/>
+        {/* Partners */}
+        <section className="pt-14">
+          <h2 className="text-xl font-bold pb-6">Our Partners</h2>
+          <p className="text-[#828282]">Coming Soon!</p>
+        </section>
       </div>
       <Footer />
     </div>
