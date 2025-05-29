@@ -1,21 +1,37 @@
+import comingSoonImage from "../assets/images/publications-coming-soon.png";
+
 export const blogs = [
   // these are formated data
+  // {
+  //   title: "tba",
+  //   publishdate: "[DATE]",
+  //   authors: ["person 1", "person 2"],
+  //   text: "",
+  //   image: ["some image url if any"],
+  // },
   {
-    title: "tba",
-    publishdate: "[DATE]",
-    authors: ["person 1", "person 2"],
+    title: "Coming Soon!",
+    publishdate: "",
+    authors: [""],
     text: "",
-    images: ["some image url if any"],
-  },
+    image: [comingSoonImage],
+  }
 ];
 
 export const newsletters = [
   // these are formated data
+  // {
+  //   title: "tba",
+  //   publishdate: "[DATE]",
+  //   authors: ["person 1", "person 2"],
+  //   text: "",
+  //   image: ["some image url if any"],
+  // },
   {
-    title: "tba",
-    publishdate: "[DATE]",
-    authors: ["person 1", "person 2"],
+    title: "Coming Soon!",
+    publishdate: "",
+    authors: [""],
     text: "",
-    images: ["some image url if any"],
-  },
+    image: [comingSoonImage],
+  }
 ];
