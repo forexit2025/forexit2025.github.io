@@ -9,7 +9,7 @@ function PublicationsPage() {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
         {items.map((item, index) => (
-          <div key={index} className="py-4 flex flex-col">
+          <div key={index} className="py-4 flex flex-col transform transition-transform duration-300 hover:scale-105">
             <img src={item.image?.[0] || ""} alt={item.title} className="w-full h-48 object-cover rounded-xl mb-4" />
             <h3 className="text-xs font-semibold mb-2">{item.title}</h3>
             {item.publishdate?.[0] && <p className="text-xs text-gray-600 mb-2">Published on {item.publishdate}</p>}

@@ -14,7 +14,7 @@ function SponsorsAndPartnersPage() {
       <Header />
       <div className="p-20">
         <section className="flex flex-row justify-center items-center mt-20">
-          <img src={fxaImage} alt="FXA Logo Image" className="w-3/5" />
+          <img src={fxaImage} alt="FXA Logo Image" className="w-3/5 transform transition-transform duration-300 hover:scale-102" />
           <div className="p-16 pr-0">
             <h1 className="text-5xl font-bold mb-6">Our Sponsors and Partners</h1>
             <p className="text-lg font-medium mb-6">
@@ -22,9 +22,11 @@ function SponsorsAndPartnersPage() {
               happen!
             </p>
             <p className="mb-4 text-[#828282]">Find out more about us below!</p>
-            <Link to={prospectusLink} target="_blank" rel="nonreferrer noopener">
-              <button className="text-white bg-black w-full">View Our Prospectus</button>
-            </Link>
+            <div className="transform transition-transform duration-300 hover:scale-105">
+              <Link to={prospectusLink} target="_blank" rel="nonreferrer noopener">
+                <button className="text-white bg-black w-full">View Our Prospectus</button>
+              </Link>
+            </div>
           </div>
         </section>
         {/* Sponsors */}
@@ -32,7 +34,9 @@ function SponsorsAndPartnersPage() {
           <h2 className="text-xl font-bold pb-6">Our Sponsors</h2>
           <p className="text-[#828282]">Coming Soon!</p>
         </section>
-        <hr className="w-1/4 text-gray-300" />
+        <div className="flex justify-center items-center">
+          <hr className="w-1/4 text-gray-300"/>
+        </div>
         {/* Partners */}
         <section className="pt-14">
           <h2 className="text-xl font-bold pb-6">Our Partners</h2>

@@ -67,18 +67,20 @@ export default function Contact() {
           {/* Join SpArc */}
           <div className="text-center">
             <p className="font-semibold text-lg mb-2">Join us on SpArc</p>
-            <button
-              onClick={() =>
-                window.open(
-                  "https://www.arc.unsw.edu.au/get-involved/opportunity?name=UNSW%20Forex%20Association",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-              className="inline-block bg-[#0A58CA] text-white font-bold py-2 px-6 rounded-md transform transition-transform duration-300 hover:scale-105"
-            >
-              Join Here!
-            </button>
+            <div className="transform transition-transform duration-300 hover:scale-105">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.arc.unsw.edu.au/get-involved/opportunity?name=UNSW%20Forex%20Association",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+                className="inline-block bg-[#0A58CA] text-white font-bold py-2 px-6 rounded-md"
+              >
+                Join Here!
+              </button>
+            </div>
           </div>
 
           {/* Social Icons */}
@@ -178,7 +180,7 @@ export default function Contact() {
               className="border rounded-md p-2 col-span-2"
             />
 
-            <div className="col-span-2 text-center">
+            <div className="col-span-2 text-center ">
               <button
                 type="submit"
                 disabled={!isFormValid}
