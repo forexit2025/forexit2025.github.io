@@ -37,10 +37,10 @@ function HomePage() {
             From tailored educational workshops, academic support, peer connection and case competitions to strategic industry engagement, we empower emerging leaders in commerce and finance to grow with purpose and confidence.
           </p>
         </div>
-        <div className="pb-[60px]">
+        <div className="pb-[60px] transform transition-transform duration-300 hover:scale-105">
           <button
             onClick={() => navigate("/aboutus")}
-            className="w-[170px] h-[56px] font-bold text-white text-lg rounded-md transform transition-transform duration-300 hover:scale-105"
+            className="w-[170px] h-[56px] font-bold text-white text-lg rounded-md"
             style={{
               background: "linear-gradient(135deg, #56CDD3 0%, #3596E3 100%)"
             }}
@@ -83,10 +83,10 @@ function HomePage() {
             </div>
 
             {/* More Events Button */}
-            <div className="mt-12">
+            <div className="mt-12 transform transition-transform duration-300 hover:scale-105">
               <button
                 onClick={() => navigate("/events")}
-                className="w-[140px] h-[56px] font-bold text-white text-lg rounded-md transform transition-transform duration-300 hover:scale-105"
+                className="w-[140px] h-[56px] font-bold text-white text-lg rounded-md"
                 style={{
                   background: "linear-gradient(135deg, #56CDD3 0%, #3596E3 100%)"
                 }}
@@ -121,10 +121,10 @@ function HomePage() {
             </div>
 
             {/* See All Publications Button */}
-            <div className="flex justify-center mt-12 pb-[50px]">
+            <div className="flex justify-center mt-12 pb-[50px] transform transition-transform duration-300 hover:scale-105">
               <button
                 onClick={() => navigate("/publications")}
-                className="w-[220px] h-[56px] font-bold text-white text-md rounded-md transform transition-transform duration-300 hover:scale-105"
+                className="w-[220px] h-[56px] font-bold text-white text-md rounded-md"
                 style={{
                   background: "linear-gradient(135deg, #56CDD3 0%, #3596E3 100%)"
                 }}
