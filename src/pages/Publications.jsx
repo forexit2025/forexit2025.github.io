@@ -24,7 +24,7 @@ function PublicationsPage() {
     <div className="w-full min-h-screen flex flex-col justify-center items-center overflow-x-hidden overflow-y-auto">
       <Header />
       <div className="p-20">
-        <h1 className="mt-30 text-7xl font-semibold flex justify-center mb-10 bg-gradient-to-r from-[#014EB1] to-[#31C6E1] bg-clip-text text-transparent">
+        <h1 className="mt-20 text-7xl font-semibold flex justify-center mb-10 bg-gradient-to-r from-[#014EB1] to-[#31C6E1] bg-clip-text text-transparent">
           Our Publications
         </h1>
         {/* Blogs */}
