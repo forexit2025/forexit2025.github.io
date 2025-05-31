@@ -1,10 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 
 function HomePage() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    if (location.hash === "#contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <div className="w-full min-h-screen flex flex-col">
@@ -134,8 +143,10 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <div ref={contactRef} className="w-full min-h-screen">
+            <Contact />
+        </div>
 
-        <Contact />
 
       </main>
 

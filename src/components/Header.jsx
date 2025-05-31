@@ -65,13 +65,14 @@ const Header = () => {
         <Link to="/publications" style={getLinkStyle('/publications')} className="hover:underline transition">
           Publications
         </Link>
-        <div className="transform transition-transform duration-300 hover:scale-105">
+
+        <Link to="/#contact" className="transform transition-transform duration-300 hover:scale-105">
           <button
             className="ml-1 bg-[#004AAB] text-sm text-white px-4 py-2 rounded-[10px] hover:bg-[#003b8a]"
           >
             Get in Touch
           </button>
-        </div>
+        </Link>
       </nav>
     </header>
   );
