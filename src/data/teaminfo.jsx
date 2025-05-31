@@ -6,6 +6,7 @@ export const team = [
     port: "",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "William Lin",
@@ -13,6 +14,7 @@ export const team = [
     port: "",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/william.png",
   },
   {
     name: "Elaina Chao",
@@ -20,6 +22,7 @@ export const team = [
     port: "",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Amy Wang",
@@ -27,6 +30,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/amy.png",
   },
   {
     name: "Marcus Len",
@@ -34,6 +38,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Mark Qu",
@@ -41,6 +46,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Nicole Chan",
@@ -48,6 +54,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Lianzhi Li",
@@ -55,6 +62,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Agnes Tjokrosetio",
@@ -62,6 +70,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Jayden Choi",
@@ -69,6 +78,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "JC Lansangan",
@@ -76,6 +86,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/jc.JPEG",
   },
   {
     name: "Davis Lim",
@@ -83,6 +94,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Jay Jeong",
@@ -90,6 +102,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/Jay.jpeg",
   },
   {
     name: "Angela Yang",
@@ -97,6 +110,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/angela.jpeg",
   },
   {
     name: "Clare Kim",
@@ -104,6 +118,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Natasha Lo",
@@ -111,6 +126,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Max Li",
@@ -118,6 +134,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Nicholas Ng",
@@ -125,6 +142,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/nick.jpeg",
   },
   {
     name: "Talia Xia",
@@ -132,6 +150,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Declan Gormley",
@@ -139,6 +158,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/declan.jpeg",
   },
   {
     name: "Katya Lal",
@@ -146,6 +166,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Keane Lie",
@@ -153,6 +174,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Brandon Nguyen",
@@ -160,6 +182,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/brandon.jpeg",
   },
   {
     name: "Daisy Liu",
@@ -167,6 +190,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/Daisy.png",
   },
   {
     name: "Jaesung Park",
@@ -174,6 +198,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/jaesung.jpeg",
   },
   {
     name: "Kayla Lee",
@@ -181,6 +206,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: null,
   },
   {
     name: "Jeeviha Sangar",
@@ -188,6 +214,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/Jeeviha.jpeg",
   },
   {
     name: "Jon Huh",
@@ -195,5 +222,6 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
+    img: "website/src/assets/team/jon.jpg",
   },
 ];
