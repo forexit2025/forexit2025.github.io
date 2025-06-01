@@ -13,7 +13,14 @@ const OurTeamPage = () => {
 
   // Groupings
   const executives = teamThisYear.filter((m) =>
-    ["Co-President", "Secretary", "Vice President of Internals", "Vice President of Marketing", "Vice President of Sponsorships", "Vice President of Externals"].includes(m.role)
+    [
+      "Co-President",
+      "Secretary",
+      "Vice President of Internals",
+      "Vice President of Marketing",
+      "Vice President of Sponsorships",
+      "Vice President of Externals",
+    ].includes(m.role)
   );
   const internals = teamThisYear.filter((m) => m.port === "Internals" && !executives.includes(m));
   const marketing = teamThisYear.filter((m) => m.port === "Marketing" && !executives.includes(m));
@@ -54,11 +61,8 @@ const OurTeamPage = () => {
             )}
           </div>
         ) : (
-          <div className="mt-20 text-3xl text-gray-500 font-semibold text-center pb-[60px]">
-            Coming soon!
-          </div>
+          <div className="mt-20 text-3xl text-gray-500 font-semibold text-center pb-[60px]">Coming soon!</div>
         )}
-
       </main>
       <div className="pb-[40px]"></div>
       <Footer />

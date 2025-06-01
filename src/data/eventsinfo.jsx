@@ -2,54 +2,13 @@ import Blank from "../assets/cp/blank.png";
 import DirectorRecruitment2025 from "../assets/cp/events/DirectorRecruitment2025.jpg";
 
 export const events = [
-  // these are formated data
   {
-    name: "Test Event",
+    name: "Coming Soon!",
     year: "2025",
     description: "test description",
     cp: Blank,
     link: "",
     type: "upcoming",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "upcoming",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "past",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "past",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "past",
-  },
-  {
-    name: "Test Event",
-    year: "2025",
-    description: "test description",
-    cp: Blank,
-    link: "",
-    type: "past",
   },
   {
     name: "2025 Director Recruitment",

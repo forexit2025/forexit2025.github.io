@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import Execs2025 from "../assets/images/execs2025.png";
 import AboutUsFrame from "../assets/images/about-us-frame.png";
 import AboutUs1 from "../assets/images/about-us-1.png";
 import AboutUs2 from "../assets/images/about-us-2.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function AboutUsPage() {
   const navigate = useNavigate();
@@ -20,17 +20,17 @@ function AboutUsPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-auto">
+    <div className="w-full min-h-screen flex flex-col overflow-x-hidden overflow-y-auto gap-10">
       <Header />
-      <div className="pt-[150px]">
+      <div className="pt-[120px]">
         <div
-          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px]"
+          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[120px] mx-[8vw] py-30 px-35 gap-16"
           style={{ backgroundImage: `url(${AboutUsFrame})` }}
         >
           {createSection({
             headerstyle: "text-white text-5xl font-bold",
             header: "About Us",
-            paragraphstyle: "text-white text-md text-center",
+            paragraphstyle: "text-white text-xl text-center font-bold",
             paragraph: `At the UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of
             their professional journey with intentional, impactful development. We are a newly founded society,
             established in March 2025, born out of a passion for breaking down the barriers to financial literacy and
@@ -38,12 +38,12 @@ function AboutUsPage() {
           })}
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mx-[8vw] py-10 px-20 gap-8">
         <div>
           {createSection({
-            headerstyle: "text-3xl text-center font-bold",
+            headerstyle: "text-4xl text-center font-bold py-2",
             header: "Our Mission",
-            paragraphstyle: "text-md text-center",
+            paragraphstyle: "flex flex-col text-xl text-center py-8 gap-4 font-semibold",
             paragraph: (
               <>
                 <p className="text-[#004AAD] font-bold italic">Our purpose is simple: Accessibility</p>
@@ -59,15 +59,15 @@ function AboutUsPage() {
           })}
         </div>
         <div className="flex flex-row justify-center items-center gap-10">
-          <img src={AboutUs1} alt="Activity 1" className="w-[30%] h-auto object-cover" />
-          <img src={AboutUs2} alt="Activity 2" className="w-[30%] h-auto object-cover" />
+          <img src={AboutUs1} alt="Activity 1" className="w-[60%] h-auto object-cover" />
+          <img src={AboutUs2} alt="Activity 2" className="w-[60%] h-auto object-cover" />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mx-[8vw] pb-10 px-20 gap-8">
         {createSection({
-          headerstyle: "text-3xl font-bold",
+          headerstyle: "text-4xl font-bold",
           header: "What We Do",
-          paragraphstyle: "text-md text-center",
+          paragraphstyle: "text-xl text-center font-semibold",
           paragraph: `At the UNSW Forex Association, we cultivate a vibrant community through insightful educational programs,
           hands-on simulations and meaningful industry exposure. Whether it is a first interview, securing their
           graduate roles or even taking control of their personal finances in an increasingly information saturated
@@ -78,21 +78,23 @@ function AboutUsPage() {
           buttonstyle: "text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
         })}
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex justify-center items-center">
+        <hr className="w-1/2 text-gray-300" />
+      </div>
+      <div className="flex flex-col md:flex-row justify-between items-center py-10 pl-20">
         <div>
           {createSection({
-            headerstyle: "text-3xl font-bold",
+            headerstyle: "text-4xl font-bold py-4",
             header: "Our Team",
-            paragraphstyle: "text-md text-left",
+            paragraphstyle: "text-xl text-left py-4 font-semibold",
             paragraph: `Meet the FXA team, the people who make it happen!`,
             button: (
-              <>
+              <div onClick={() => navigate("/ourteam")} className="flex flex-row justify-center items-center gap-4">
                 <p>Meet our Team</p>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </>
+              </div>
             ),
-            buttonstyle:
-              "flex flex-row gap-4 justify-center items-center text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
+            buttonstyle: "text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
           })}
         </div>
         <img src={Execs2025} alt="2025 Executives" className="w-[50%] h-auto object-cover" />

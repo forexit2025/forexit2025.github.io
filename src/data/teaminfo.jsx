@@ -70,7 +70,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: null,
+    img: "website/src/assets/team/agnes.JPG",
   },
   {
     name: "Jayden Choi",
