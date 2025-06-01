@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Logo from "../assets/headandfoot/logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -38,7 +39,7 @@ const Header = () => {
     >
       {/* Logo */}
       <Link to="/" className="w-[240.05px] h-[63px] block transform transition-transform duration-300 hover:scale-105">
-        <img src="website/src/assets/headandfoot/logo.png" alt="Logo" className="h-full w-auto" />
+        <img src={Logo} alt="Logo" className="h-full w-auto" />
       </Link>
 
       {/* Navigation Links */}

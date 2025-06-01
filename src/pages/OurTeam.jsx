@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { team } from "../data/teaminfo";
+import { showTeam as team } from "../data/teaminfo";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import YearNavigator from "../components/YearNavigator";
 import TeamGroup from "../components/TeamGroup";
+import Team from "../assets/team/team.png";
 
 const OurTeamPage = () => {
   const [activeYear, setActiveYear] = useState("2025");
@@ -33,11 +34,7 @@ const OurTeamPage = () => {
       <main className="flex-grow flex flex-col justify-center items-center">
         {/* Banner */}
         <div className="w-full max-w-[1200px] px-4 pt-[120px] pb-[60px]">
-          <img
-            src="website/src/assets/team/team.png"
-            alt="Team Banner"
-            className="rounded-[40px] w-full object-cover"
-          />
+          <img src={Team} alt="Team Banner" className="rounded-[40px] w-full object-cover" />
         </div>
 
         {/* Year selector */}

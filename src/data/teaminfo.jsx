@@ -1,5 +1,17 @@
-export const team = [
-  // these are formated data
+// import all images from the team folders
+const importedImages = import.meta.glob("../assets/team/*.{png,jpg,jpeg}", {
+  eager: true,
+  import: "default",
+});
+
+// map filenames to urls
+const images = {};
+for (const path in importedImages) {
+  const filename = path.split("/").pop();
+  images[filename] = importedImages[path];
+}
+
+const team = [
   {
     name: "Annabella Cheng",
     role: "Co-President",
@@ -14,7 +26,7 @@ export const team = [
     port: "",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/william.png",
+    img: "william.png",
   },
   {
     name: "Elaina Chao",
@@ -30,7 +42,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/amy.png",
+    img: "amy.png",
   },
   {
     name: "Marcus Len",
@@ -70,7 +82,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/agnes.JPG",
+    img: "agnes.jpg",
   },
   {
     name: "Jayden Choi",
@@ -86,7 +98,7 @@ export const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/jc.JPEG",
+    img: "jc.jpeg",
   },
   {
     name: "Davis Lim",
@@ -102,7 +114,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/Jay.jpeg",
+    img: "jay.jpeg",
   },
   {
     name: "Angela Yang",
@@ -110,7 +122,7 @@ export const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/angela.jpeg",
+    img: "angela.jpeg",
   },
   {
     name: "Clare Kim",
@@ -142,7 +154,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/nick.jpeg",
+    img: "nick.jpeg",
   },
   {
     name: "Talia Xia",
@@ -158,7 +170,7 @@ export const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/declan.jpeg",
+    img: "declan.jpeg",
   },
   {
     name: "Katya Lal",
@@ -182,7 +194,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/brandon.jpeg",
+    img: "brandon.jpeg",
   },
   {
     name: "Daisy Liu",
@@ -190,7 +202,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/Daisy.png",
+    img: "daisy.png",
   },
   {
     name: "Jaesung Park",
@@ -198,7 +210,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/jaesung.jpeg",
+    img: "jaesung.jpeg",
   },
   {
     name: "Kayla Lee",
@@ -214,7 +226,7 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/Jeeviha.jpeg",
+    img: "jeeviha.jpeg",
   },
   {
     name: "Jon Huh",
@@ -222,6 +234,12 @@ export const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "website/src/assets/team/jon.jpg",
+    img: "jon.jpg",
   },
 ];
+
+// include imported image
+export const showTeam = team.map((p) => ({
+  ...p,
+  img: p.img ? images[p.img.split("/").pop()] : null,
+}));
