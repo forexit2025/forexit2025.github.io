@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import MessageSent from "../components/MessageSent";
 
 export default function Contact() {
@@ -31,23 +32,28 @@ export default function Contact() {
     if (!isFormValid) return;
 
     try {
-      // IDK WHY THIS DOESN'T WORK
-      await new Promise((res) => setTimeout(res, 500));
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        message: `${formData.message}\n\nFrom: ${formData.firstName} ${formData.lastName}`,
+      };
+
+      await emailjs.send(
+        "service_ugh8pew",     // e.g., service_xxx
+        "template_yw8ggn6",    // e.g., template_yyy
+        templateParams,
+        "oRRvVOUHvcGVvNBM1"         // e.g., user_zzz or your public key from EmailJS
+      );
 
       setPopupVisible(true);
-
       setFormData({
         firstName: "",
         lastName: "",
         email: "",
         message: ""
       });
-
-
-      const mailtoLink = `mailto:forexunsw@gmail.com?subject=Message from ${formData.firstName} ${formData.lastName}&body=From: ${formData.email}%0D%0A%0D%0A${formData.message}`;
-      window.location.href = mailtoLink;
     } catch (err) {
-      console.error("Submission failed", err);
+      console.error("EmailJS failed", err);
     }
   };
 
