@@ -1,25 +1,23 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import MessageSent from "../components/MessageSent";
+import Fb from "../assets/home/fb.png";
+import Insta from "../assets/home/insta.png";
+import LinkedIn from "../assets/home/linkedin.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [isPopupVisible, setPopupVisible] = useState(false);
 
-  const isValidEmail = (email) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  const isFormValid =
-    formData.firstName &&
-    formData.lastName &&
-    isValidEmail(formData.email) &&
-    formData.message;
+  const isFormValid = formData.firstName && formData.lastName && isValidEmail(formData.email) && formData.message;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,10 +37,10 @@ export default function Contact() {
       };
 
       await emailjs.send(
-        "service_ugh8pew",     // e.g., service_xxx
-        "template_yw8ggn6",    // e.g., template_yyy
+        "service_ugh8pew", // e.g., service_xxx
+        "template_yw8ggn6", // e.g., template_yyy
         templateParams,
-        "oRRvVOUHvcGVvNBM1"         // e.g., user_zzz or your public key from EmailJS
+        "oRRvVOUHvcGVvNBM1" // e.g., user_zzz or your public key from EmailJS
       );
 
       setPopupVisible(true);
@@ -50,7 +48,7 @@ export default function Contact() {
         firstName: "",
         lastName: "",
         email: "",
-        message: ""
+        message: "",
       });
     } catch (err) {
       console.error("EmailJS failed", err);
@@ -60,13 +58,9 @@ export default function Contact() {
   return (
     <div className="w-full flex justify-center py-[20px] rounded-md">
       <div className="w-full bg-[rgb(247,247,247)] relative py-[50px] rounded-4xl">
-        <h2 className="text-3xl font-bold text-center mb-2">
-          How to get in touch with us?
-        </h2>
-				<br />
-        <p className="text-center mb-12">
-          We are an ambitious association and look forward to working with you!
-        </p>
+        <h2 className="text-3xl font-bold text-center mb-2">How to get in touch with us?</h2>
+        <br />
+        <p className="text-center mb-12">We are an ambitious association and look forward to working with you!</p>
 
         {/* Join and Socials */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 mb-16">
@@ -99,11 +93,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="transform transition-transform duration-300 hover:scale-110"
               >
-                <img
-                  src="website/src/assets/home/fb.png"
-                  alt="Facebook"
-                  className="h-10"
-                />
+                <img src={Fb} alt="Facebook" className="h-10" />
               </a>
               <a
                 href="https://www.instagram.com/unswfxa"
@@ -111,11 +101,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="transform transition-transform duration-300 hover:scale-110"
               >
-                <img
-                  src="website/src/assets/home/insta.png"
-                  alt="Instagram"
-                  className="h-10"
-                />
+                <img src={Insta} alt="Instagram" className="h-10" />
               </a>
               <a
                 href="https://www.linkedin.com/company/unsw-forex-association/posts/?feedView=all&viewAsMember=true"
@@ -123,11 +109,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="transform transition-transform duration-300 hover:scale-110"
               >
-                <img
-                  src="website/src/assets/home/linkedin.png"
-                  alt="LinkedIn"
-                  className="h-10"
-                />
+                <img src={LinkedIn} alt="LinkedIn" className="h-10" />
               </a>
             </div>
           </div>
@@ -142,10 +124,7 @@ export default function Contact() {
             </a>
           </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="max-w-[700px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4"
-          >
+          <form onSubmit={handleSubmit} className="max-w-[700px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               name="firstName"
@@ -191,9 +170,7 @@ export default function Contact() {
                 type="submit"
                 disabled={!isFormValid}
                 className={`w-[200px] h-[48px] font-bold rounded-md transition-transform duration-300 ${
-                  isFormValid
-                    ? "bg-black text-white hover:scale-105"
-                    : "bg-gray-300 text-gray-600 cursor-not-allowed"
+                  isFormValid ? "bg-black text-white hover:scale-105" : "bg-gray-300 text-gray-600 cursor-not-allowed"
                 }`}
               >
                 Submit
