@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-[1440px] h-[80px] fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-8 transition-transform duration-300 ${
+      className={`w-full h-[80px] fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-8 transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
       style={{
