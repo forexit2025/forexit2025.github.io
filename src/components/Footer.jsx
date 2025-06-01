@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Logo from "../assets/headandfoot/footer.png";
 
 const Footer = () => {
   return (
@@ -7,18 +8,15 @@ const Footer = () => {
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2"
         style={{
-          width: '1240px',
-          height: '1px',
-          backgroundColor: 'rgb(230, 230, 230)',
+          width: "1240px",
+          height: "1px",
+          backgroundColor: "rgb(230, 230, 230)",
         }}
       />
 
       {/* Centered Logo */}
       <div className="w-[400px] h-[76px]">
-        <img
-          src="website/src/assets/headandfoot/footer.png"
-          alt="Logo"
-        />
+        <img src={Logo} alt="Logo" />
       </div>
     </footer>
   );
