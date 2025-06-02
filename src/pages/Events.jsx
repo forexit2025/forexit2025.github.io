@@ -27,16 +27,16 @@ function EventsPage() {
         {array && array.length > 0 ? (
           array.length > 3 ? (
             <div className="pl-2 pr-4 flex bg-[#F1F7FF] rounded-4xl w-[35vw] justify-between items-center">
-              <input
-                type="text"
-                placeholder="search for events"
-                className="p-2 w-[100%] rounded-4xl text-black typing-placeholder focus:outline-none"
-                value={type === "upcoming" ? searchUpcoming : searchPast}
-                onChange={(e) =>
-                  type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value)
-                }
-              />
-              <i className="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  placeholder="search for events"
+                  className="p-2 w-[100%] rounded-4xl text-black typing-placeholder focus:outline-none"
+                  value={type === "upcoming" ? searchUpcoming : searchPast}
+                  onChange={(e) =>
+                    type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value)
+                  }
+                />
+                <i className="fa-solid fa-magnifying-glass"></i>
             </div>
           ) : (
             <div></div>
@@ -44,7 +44,9 @@ function EventsPage() {
         ) : (
           <div></div>
         )}
-        <Card array={array} />
+        <div className="transform transition-transform duration-300 hover:scale-105">
+            <Card array={array}/>
+        </div>
       </div>
     );
   };

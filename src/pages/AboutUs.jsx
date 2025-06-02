@@ -14,7 +14,10 @@ function AboutUsPage() {
       <>
         <h1 className={headerstyle}>{header}</h1>
         <p className={paragraphstyle}>{paragraph}</p>
-        {button && <button className={buttonstyle}>{button}</button>}
+        {button && 
+        <div className="transform transition-transform duration-300 hover:scale-105">
+          <button className={buttonstyle}>{button}</button>
+        </div>}
       </>
     );
   };
@@ -30,7 +33,7 @@ function AboutUsPage() {
           {createSection({
             headerstyle: "text-white text-5xl font-bold",
             header: "About Us",
-            paragraphstyle: "text-white text-xl text-center font-bold",
+            paragraphstyle: "text-white text-xl text-center font-semibold",
             paragraph: `At the UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of
             their professional journey with intentional, impactful development. We are a newly founded society,
             established in March 2025, born out of a passion for breaking down the barriers to financial literacy and
@@ -43,7 +46,7 @@ function AboutUsPage() {
           {createSection({
             headerstyle: "text-4xl text-center font-bold py-2",
             header: "Our Mission",
-            paragraphstyle: "flex flex-col text-xl text-center py-8 gap-4 font-semibold",
+            paragraphstyle: "flex flex-col text-xl text-center py-8 gap-4 font-medium",
             paragraph: (
               <>
                 <p className="text-[#004AAD] font-bold italic">Our purpose is simple: Accessibility</p>
@@ -67,7 +70,7 @@ function AboutUsPage() {
         {createSection({
           headerstyle: "text-4xl font-bold",
           header: "What We Do",
-          paragraphstyle: "text-xl text-center font-semibold",
+          paragraphstyle: "text-xl text-center font-medium",
           paragraph: `At the UNSW Forex Association, we cultivate a vibrant community through insightful educational programs,
           hands-on simulations and meaningful industry exposure. Whether it is a first interview, securing their
           graduate roles or even taking control of their personal finances in an increasingly information saturated
@@ -76,7 +79,7 @@ function AboutUsPage() {
           members and the broader student body.`,
           button: "View Our Events",
           buttonstyle:
-            "text-white bg-[linear-gradient(#54C8D5,#399CE2)] transform transition-transform duration-300 hover:scale-105",
+            "text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
         })}
       </div>
       <div className="flex justify-center items-center">
@@ -87,7 +90,7 @@ function AboutUsPage() {
           {createSection({
             headerstyle: "text-4xl font-bold py-4",
             header: "Our Team",
-            paragraphstyle: "text-xl text-left py-4 font-semibold",
+            paragraphstyle: "text-xl text-left py-4 font-medium",
             paragraph: `Meet the FXA team, the people who make it happen!`,
             button: (
               <div onClick={() => navigate("/ourteam")} className="flex flex-row justify-center items-center gap-4">
@@ -96,7 +99,7 @@ function AboutUsPage() {
               </div>
             ),
             buttonstyle:
-              "text-white bg-[linear-gradient(#54C8D5,#399CE2)] transform transition-transform duration-300 hover:scale-105",
+              "text-white bg-[linear-gradient(#54C8D5,#399CE2)]",
           })}
         </div>
         <img src={Execs2025} alt="2025 Executives" className="w-[50%] h-auto object-cover" />

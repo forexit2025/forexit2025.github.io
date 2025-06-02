@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Home from "../assets/home/home.png";
 import GroupHome from "../assets/home/group-home.png";
-import Handbook from "../assets/home/handbook.png";
-import Shark from "../assets/home/shark.jpg";
+import { events } from "../data/eventsinfo";
+import HomeEventCard from "../components/HomeEventCard";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -61,27 +61,7 @@ function HomePage() {
         <div className="w-full flex justify-center">
           <div className="bg-[#F7F7F7] w-full py-16 px-8 flex flex-col items-center rounded-4xl">
             <h2 className="text-3xl font-bold mb-12">Our Events</h2>
-
-            <div className="flex flex-wrap justify-center gap-8 max-w-[1200px] w-full">
-              {/* Event Card 1 */}
-              <div className="w-[500px] bg-white rounded-xl overflow-hidden shadow-sm transform transition-transform duration-300 hover:scale-105">
-                <img src={Handbook} alt="Director Recruitment" className="w-full h-[280px] object-cover" />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">2025 Director Recruitment</h3>
-                  <p className="text-gray-400 italic mt-1">Past Event</p>
-                </div>
-              </div>
-
-              {/* Event Card 2 */}
-              <div className="w-[500px] bg-white rounded-xl overflow-hidden shadow-sm transform transition-transform duration-300 hover:scale-105">
-                <img src={Shark} alt="Pubcrawl" className="w-full h-[280px] object-cover" />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">Pubcrawl</h3>
-                  <p className="text-gray-400 italic mt-1">Upcoming Event</p>
-                </div>
-              </div>
-            </div>
-
+            <HomeEventCard array={events}/>
             {/* More Events Button */}
             <div className="mt-12 transform transition-transform duration-300 hover:scale-105">
               <button
