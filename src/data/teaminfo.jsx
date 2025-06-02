@@ -93,7 +93,7 @@ const team = [
     img: null,
   },
   {
-    name: "JC Lansangan",
+    name: "Julianna Clarisse Lansangan",
     role: "Human Resources Director",
     port: "Internals",
     degree: "tba",
