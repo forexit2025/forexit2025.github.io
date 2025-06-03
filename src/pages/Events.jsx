@@ -23,20 +23,20 @@ function EventsPage() {
   const createEventGrid = (array, type) => {
     return (
       <div className="flex flex-col items-start w-full space-y-2">
-        <h3 className="text-4xl font-bold pt-2 pb-4">{type === "upcoming" ? "Upcoming" : "Past"} Events</h3>
+        <h3 className="text-4xl font-bold px-5 pt-2 pb-4">{type === "upcoming" ? "Upcoming" : "Past"} Events</h3>
         {array && array.length > 0 ? (
           array.length > 3 ? (
             <div className="pl-2 pr-4 flex bg-[#F1F7FF] rounded-4xl w-[35vw] justify-between items-center">
-                <input
-                  type="text"
-                  placeholder="search for events"
-                  className="p-2 w-[100%] rounded-4xl text-black typing-placeholder focus:outline-none"
-                  value={type === "upcoming" ? searchUpcoming : searchPast}
-                  onChange={(e) =>
-                    type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value)
-                  }
-                />
-                <i className="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="search for events"
+                className="p-2 w-[100%] rounded-4xl text-black typing-placeholder focus:outline-none"
+                value={type === "upcoming" ? searchUpcoming : searchPast}
+                onChange={(e) =>
+                  type === "upcoming" ? setSearchUpcoming(e.target.value) : setSearchPast(e.target.value)
+                }
+              />
+              <i className="fa-solid fa-magnifying-glass"></i>
             </div>
           ) : (
             <div></div>
@@ -44,9 +44,7 @@ function EventsPage() {
         ) : (
           <div></div>
         )}
-        <div className="transform transition-transform duration-300 hover:scale-105">
-            <Card array={array}/>
-        </div>
+        <Card array={array} />
       </div>
     );
   };
@@ -65,7 +63,7 @@ function EventsPage() {
           </div>
         </div>
         <YearNavigator year={year} setYear={setYear} />
-        <div className="flex flex-col pt-10 pb-15 px-30 gap-10">
+        <div className="flex flex-col pt-10 pb-15 px-25 gap-10">
           {upcoming && createEventGrid(upcoming, "upcoming")}
           <div className="flex justify-center items-center">
             <hr className="w-full text-gray-300" />
