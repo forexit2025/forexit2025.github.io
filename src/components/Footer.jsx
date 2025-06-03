@@ -13,7 +13,7 @@ const Footer = () => {
       />
 
       {/* Centered Logo */}
-      <div className="w-[40%] h-auto">
+      <div className="w-[350px] md:w-[650px] h-auto">
         <img src={Logo} alt="Logo" />
       </div>
     </footer>
