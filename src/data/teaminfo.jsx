@@ -241,5 +241,6 @@ const team = [
 // include imported image
 export const showTeam = team.map((p) => ({
   ...p,
-  img: p.img && images[p.img] ? images[p.img] : images["peppa-pig.jpg"],
+  // img: p.img && images[p.img] ? images[p.img] : images["peppa-pig.jpg"],
+  img: p.img && images[p.img] ? images[p.img] : images["placeholder.png"],
 }));

@@ -1,7 +1,7 @@
 import React from "react";
 import { events } from "../data/eventsinfo";
 import YearNavigator from "../components/YearNavigator";
-import Card from "../components/Card";
+import { EventCard } from "../components/Card";
 import EventsFrame from "../assets/images/events-frame.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -23,7 +23,7 @@ function EventsPage() {
   const createEventGrid = (array, type) => {
     return (
       <div className="flex flex-col items-start w-full space-y-2">
-        <h3 className="text-4xl font-bold px-5 pt-2 pb-4">{type === "upcoming" ? "Upcoming" : "Past"} Events</h3>
+        <h3 className="text-4xl font-bold px-2 pt-2 pb-4">{type === "upcoming" ? "Upcoming" : "Past"} Events</h3>
         {array && array.length > 0 ? (
           array.length > 3 ? (
             <div className="pl-2 pr-4 flex bg-[#F1F7FF] rounded-4xl w-[35vw] justify-between items-center">
@@ -44,7 +44,7 @@ function EventsPage() {
         ) : (
           <div></div>
         )}
-        <Card array={array} />
+        <EventCard array={array} />
       </div>
     );
   };

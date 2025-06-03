@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import Home from "../assets/home/home.png";
 import GroupHome from "../assets/home/group-home.png";
 import { events } from "../data/eventsinfo";
-import HomeEventCard from "../components/HomeEventCard";
+import { HomeEventCard } from "../components/Card";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -18,6 +18,9 @@ function HomePage() {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
+  const upcoming = events.filter((e) => e.type === "upcoming" && e.year === "2025");
+  const past = events.filter((e) => e.type === "past" && e.year === "2025");
 
   return (
     <div className="w-full min-h-screen flex flex-col">
@@ -61,7 +64,7 @@ function HomePage() {
         <div className="w-full flex justify-center">
           <div className="bg-[#F7F7F7] w-full py-16 px-8 flex flex-col items-center rounded-4xl">
             <h2 className="text-3xl font-bold mb-12">Our Events</h2>
-            <HomeEventCard array={events}/>
+            <HomeEventCard array={[upcoming[0], past[0]]} />
             {/* More Events Button */}
             <div className="mt-12 transform transition-transform duration-300 hover:scale-105">
               <button
