@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Logo from "../assets/headandfoot/logo.png";
+import { NavigationMenu } from "./NavigationMenu";
 
 const Header = () => {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menu, setMenu] = useState(false);
 
   const getLinkStyle = (path) => (location.pathname === path ? { color: "rgb(2, 82, 186)" } : { color: "black" });
 
@@ -44,32 +46,41 @@ const Header = () => {
 
       {/* Navigation Links */}
       <nav className="flex items-center gap-8">
-        <Link to="/aboutus" style={getLinkStyle("/aboutus")} className="no-underline hover:underline transition">
-          About Us
-        </Link>
-        <Link to="/ourteam" style={getLinkStyle("/ourteam")} className="hover:underline transition">
-          Our Team
-        </Link>
-        <Link to="/events" style={getLinkStyle("/events")} className="hover:underline transition">
-          Events
-        </Link>
-        <Link
-          to="/sponsorsandpartners"
-          style={getLinkStyle("/sponsorsandpartners")}
-          className="hover:underline transition"
-        >
-          Sponsors
-        </Link>
-        <Link to="/publications" style={getLinkStyle("/publications")} className="hover:underline transition">
-          Publications
-        </Link>
-
-        <Link to="/#contact" className="transform transition-transform duration-300 hover:scale-105">
-          <button className="ml-1 bg-[#004AAB] text-sm text-white px-4 py-2 rounded-[10px] hover:bg-[#003b8a]">
-            Get in Touch
-          </button>
-        </Link>
+        <div className="hidden md:flex items-center gap-8">
+          <Link to="/aboutus" style={getLinkStyle("/aboutus")} className="no-underline hover:underline transition">
+            About Us
+          </Link>
+          <Link to="/ourteam" style={getLinkStyle("/ourteam")} className="hover:underline transition">
+            Our Team
+          </Link>
+          <Link to="/events" style={getLinkStyle("/events")} className="hover:underline transition">
+            Events
+          </Link>
+          <Link
+            to="/sponsorsandpartners"
+            style={getLinkStyle("/sponsorsandpartners")}
+            className="hover:underline transition"
+          >
+            Sponsors
+          </Link>
+          <Link to="/publications" style={getLinkStyle("/publications")} className="hover:underline transition">
+            Publications
+          </Link>
+          <Link to="/#contact" className="transform transition-transform duration-300 hover:scale-105">
+            <button className="ml-1 bg-[#004AAB] text-sm text-white px-4 py-2 rounded-[10px] hover:bg-[#003b8a]">
+              Get in Touch
+            </button>
+          </Link>
+        </div>
       </nav>
+
+      <div className="md:hidden">
+        <button onClick={() => setMenu(!menu)}>
+          <i className="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      {menu && <NavigationMenu setMenu={setMenu} getLinkStyle={getLinkStyle} />}
     </header>
   );
 };

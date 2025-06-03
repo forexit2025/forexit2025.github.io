@@ -23,20 +23,20 @@ function HomePage() {
   const past = events.filter((e) => e.type === "past" && e.year === "2025");
 
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div className="w-full flex flex-col">
       <Header />
 
       {/* Page content */}
       <main className="flex-grow flex flex-col justify-center items-center">
-        <div className="w-[1400px] h-[300px] pt-[120px]">
+        <div className="w-[50%] h-auto pt-[120px]">
           <img src={Home} alt="Home" className="h-full w-auto mx-auto" />
         </div>
 
-        <div className="w-[1300px] h-[715px] pt-[80px]">
+        <div className="w-[85%] h-auto pt-8">
           <img src={GroupHome} alt="Home" className="h-full w-auto mx-auto" />
         </div>
 
-        <div className="w-full max-w-[900px] pt-[80px] text-center mx-auto px-4 font-medium pb-[50px]">
+        <div className="w-full px-10 md:px-20 py-10 text-center mx-auto font-medium">
           <p>
             At UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of their
             professional journey with intentional, impactful development.
@@ -69,7 +69,7 @@ function HomePage() {
             <div className="mt-12 transform transition-transform duration-300 hover:scale-105">
               <button
                 onClick={() => navigate("/events")}
-                className="w-[140px] h-[56px] font-bold text-white text-lg rounded-md"
+                className="font-bold text-white text-lg rounded-md"
                 style={{
                   background: "linear-gradient(135deg, #56CDD3 0%, #3596E3 100%)",
                 }}
@@ -82,7 +82,7 @@ function HomePage() {
 
         {/* Blogs */}
         <div className="w-full flex justify-center pt-20">
-          <div className="max-w-[1200px] w-full px-4">
+          <div className="w-full px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Recent Blogs */}
               <div className="transform transition-transform duration-300 hover:scale-105">
@@ -107,7 +107,7 @@ function HomePage() {
             <div className="flex justify-center mt-12 pb-[50px] transform transition-transform duration-300 hover:scale-105">
               <button
                 onClick={() => navigate("/publications")}
-                className="w-[220px] h-[56px] font-bold text-white text-md rounded-md"
+                className="font-bold text-white text-md rounded-md"
                 style={{
                   background: "linear-gradient(135deg, #56CDD3 0%, #3596E3 100%)",
                 }}
@@ -117,7 +117,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <div ref={contactRef} className="w-full min-h-screen">
+        <div ref={contactRef} className="w-full">
           <Contact />
         </div>
       </main>

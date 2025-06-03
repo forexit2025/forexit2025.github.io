@@ -58,9 +58,9 @@ export default function Contact() {
   return (
     <div className="w-full flex justify-center py-[20px] rounded-md">
       <div className="w-full bg-[rgb(247,247,247)] relative py-[50px] rounded-4xl">
-        <h2 className="text-3xl font-bold text-center mb-2">How to get in touch with us?</h2>
+        <h2 className="text-3xl font-bold text-center mb-2 px-15">How to get in touch with us?</h2>
         <br />
-        <p className="text-center mb-12">We are an ambitious association and look forward to working with you!</p>
+        <p className="text-center mb-12 px-15">We are an ambitious association and look forward to working with you!</p>
 
         {/* Join and Socials */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 mb-16">
@@ -124,7 +124,7 @@ export default function Contact() {
             </a>
           </div>
 
-          <form onSubmit={handleSubmit} className="max-w-[700px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 px-10 md:px-20">
             <input
               type="text"
               name="firstName"
@@ -132,7 +132,7 @@ export default function Contact() {
               value={formData.firstName}
               onChange={handleChange}
               required
-              className="border rounded-md p-2 col-span-1"
+              className="w-full border rounded-md p-2 col-span-1"
             />
 
             <input
@@ -142,7 +142,7 @@ export default function Contact() {
               value={formData.lastName}
               onChange={handleChange}
               required
-              className="border rounded-md p-2 col-span-1"
+              className="w-full border rounded-md p-2 col-span-1"
             />
 
             <input

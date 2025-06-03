@@ -3,19 +3,17 @@ import Logo from "../assets/headandfoot/footer.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-[80px] mx-auto flex flex-col items-center justify-center relative">
+    <footer className="w-full h-auto mx-auto flex flex-col items-center justify-center relative">
       {/* Top Line */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2"
+        className="w-full h-[1px] absolute top-0 left-1/2 -translate-x-1/2"
         style={{
-          width: "1240px",
-          height: "1px",
           backgroundColor: "rgb(230, 230, 230)",
         }}
       />
 
       {/* Centered Logo */}
-      <div className="w-[400px] h-[76px]">
+      <div className="w-[40%] h-auto">
         <img src={Logo} alt="Logo" />
       </div>
     </footer>
