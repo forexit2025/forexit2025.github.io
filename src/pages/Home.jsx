@@ -36,7 +36,7 @@ function HomePage() {
           <img src={GroupHome} alt="Home" className="h-full w-auto mx-auto" />
         </div>
 
-        <div className="w-full px-10 md:px-20 py-10 text-center mx-auto font-medium">
+        <div className="w-full px-15 md:px-20 py-10 text-center mx-auto font-medium">
           <p>
             At UNSW Forex Association (FXA), we distinguish ourselves by supporting students through each stage of their
             professional journey with intentional, impactful development.
@@ -81,7 +81,7 @@ function HomePage() {
         </div>
 
         {/* Blogs */}
-        <div className="w-full flex justify-center pt-20">
+        <div className="w-full flex justify-center pt-20 px-10">
           <div className="w-full px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Recent Blogs */}

@@ -28,7 +28,7 @@ function AboutUsPage() {
       <Header />
       <div className="pt-[120px] w-full flex flex-col justify-center items-center ">
         <div
-          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px] md:rounded-[120px] py-15 px-10 m-6 md:mx-[8vw] md:py-30 md:px-35 gap-8 md:gap-16"
+          className="flex flex-col justify-center items-center bg-no-repeat bg-center bg-cover rounded-[50px] md:rounded-[120px] py-15 px-10 mt-6 mx-10 md:mx-[8vw] md:py-30 md:px-35 gap-8 md:gap-16"
           style={{ backgroundImage: `url(${AboutUsFrame})` }}
         >
           {createSection({
@@ -42,7 +42,7 @@ function AboutUsPage() {
           })}
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center px-10 md:mx-[8vw] md:py-10 md:px-20 gap-8">
+      <div className="flex flex-col justify-center items-center px-15 md:mx-[8vw] md:py-10 md:px-20 gap-6">
         <div>
           {createSection({
             headerstyle: "text-2xl md:text-4xl text-center font-bold py-2",
@@ -67,7 +67,7 @@ function AboutUsPage() {
           <img src={AboutUs2} alt="Activity 2" className="w-[85%] md:w-[60%] h-auto object-cover" />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center px-10 md:mx-[8vw] pb-10 px-20 gap-8">
+      <div className="flex flex-col justify-center items-center md:mx-[8vw] pb-10 px-20 gap-8">
         {createSection({
           headerstyle: "text-2xl md:text-4xl font-bold",
           header: "What We Do",
