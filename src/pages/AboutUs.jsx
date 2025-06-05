@@ -85,7 +85,7 @@ function AboutUsPage() {
       <div className="flex justify-center items-center">
         <hr className="w-1/2 text-gray-300" />
       </div>
-      <div className="w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 px-5 md:py-10 md:pl-20">
+      <div className="w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 pl-5 md:py-10 md:pl-20">
         <div className="w-full">
           {createSection({
             headerstyle: "text-center md:text-left text-2xl md:text-4xl font-bold py-4",
