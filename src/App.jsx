@@ -6,10 +6,12 @@ import OurTeamPage from "./pages/OurTeam";
 import EventsPage from "./pages/Events";
 import SponsorsAndPartnersPage from "./pages/SponsorsAndPartners";
 import PublicationsPage from "./pages/Publications";
+import ScrollTop from "./components/ScrollTop"
 
 function App() {
   return (
     <HashRouter>
+      <ScrollTop />
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<HomePage />} />
