@@ -1,4 +1,4 @@
-import placeholder from "../assets/team/placeholder.png";
+import placeholder from "../assets/team/2025/placeholder.png";
 
 const ProfileCard = ({ name, role, img }) => {
   return (

@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import YearNavigator from "../components/YearNavigator";
 import TeamGroup from "../components/TeamGroup";
-import Team from "../assets/team/team.png";
+import Team from "../assets/team/2025/team.png";
 
 const OurTeamPage = () => {
   const [activeYear, setActiveYear] = useState("2025");

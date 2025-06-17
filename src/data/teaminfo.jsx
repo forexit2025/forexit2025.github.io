@@ -1,5 +1,5 @@
 // import all images from the team folders
-const importedImages = import.meta.glob("../assets/team/*.{png,jpg,jpeg}", {
+const importedImages = import.meta.glob("../assets/team/2025/*.{png,jpg,jpeg}", {
   eager: true,
   import: "default",
 });
@@ -34,7 +34,7 @@ const team = [
     port: "",
     degree: "tba",
     year: "2025",
-    img: null,
+    img: "elaina.png",
   },
   {
     name: "Amy Wang",
@@ -82,7 +82,7 @@ const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: "agnes.jpg",
+    img: "agnes.png",
   },
   {
     name: "Jayden Choi",
@@ -98,7 +98,7 @@ const team = [
     port: "Internals",
     degree: "tba",
     year: "2025",
-    img: "jc.jpeg",
+    img: "jc.png",
   },
   {
     name: "Davis Lim",
@@ -114,7 +114,7 @@ const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
-    img: "jay.jpeg",
+    img: "jay.png",
   },
   {
     name: "Angela Yang",
@@ -122,7 +122,7 @@ const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
-    img: "angela.jpeg",
+    img: "angela.png",
   },
   {
     name: "Clare Kim",
@@ -130,7 +130,7 @@ const team = [
     port: "Marketing",
     degree: "tba",
     year: "2025",
-    img: null,
+    img: "clare.png",
   },
   {
     name: "Natasha Lo",
@@ -154,7 +154,7 @@ const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
-    img: "nick.jpeg",
+    img: "nick.png",
   },
   {
     name: "Talia Xia",
@@ -170,7 +170,7 @@ const team = [
     port: "Sponsorships",
     degree: "tba",
     year: "2025",
-    img: "declan.jpeg",
+    img: null,
   },
   {
     name: "Katya Lal",
@@ -194,7 +194,7 @@ const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "brandon.jpeg",
+    img: "brandon.png",
   },
   {
     name: "Daisy Liu",
@@ -210,7 +210,7 @@ const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "jaesung.jpeg",
+    img: "jaesung.png",
   },
   {
     name: "Kayla Lee",
@@ -226,7 +226,7 @@ const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "jeeviha.jpeg",
+    img: "jeeviha.png",
   },
   {
     name: "Jon Huh",
@@ -234,7 +234,7 @@ const team = [
     port: "Externals",
     degree: "tba",
     year: "2025",
-    img: "jon.jpg",
+    img: null,
   },
 ];
 
