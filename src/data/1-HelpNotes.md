@@ -4,8 +4,6 @@
 
 This "data" folder contains information regarding FXA's _team_, _events_, _sponsors and partners_, and _publications_. Each category has it's own files. Any updates to any of the above categories can be done in these files.
 
-Note: Using **Image URLs** assumes that all images used for the above categories are placed in the **public** folder. If you do not want to use the **public** folder, you must import the image: `import someImage from '../assets/some-image.jpg';` at the top of the relevant file (either one of the info files for the above categories), and wherever it says _{INSERT IMAGE URL}_ in the following guide below, replace with `someImage` (no apostrophes are needed).
-
 ## Formatting
 
 #### Team Page

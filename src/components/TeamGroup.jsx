@@ -1,4 +1,4 @@
-import ProfileCard from "./ProfileCard";
+import { ProfileCard } from "./Card";
 
 const TeamGroup = ({ title, members, bgColor }) => (
   <div className="w-full rounded-xl" style={{ backgroundColor: bgColor }}>

@@ -1,7 +1,7 @@
 import Blank from "../assets/cp/blank.png";
 import DirectorRecruitment2025 from "../assets/cp/events/DirectorRecruitment2025.jpg";
 import SubcommitteeRecruitment2025 from "../assets/cp/events/SubcommitteeRecruitment2025.jpg";
-import DMG2025 from "../assets/cp/events/DirectorMeetNGreet.jpg";
+import DMG2025 from "../assets/cp/events/DirectorMeetNGreet2025.jpg";
 
 export const events = [
   // {
