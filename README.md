@@ -10,7 +10,7 @@ This repo contains the source code for UNSW FXA's website. Work is still in prog
 
 ### What's in this repo?
 
-- **`src/` FOLDER:**: contains the source code and is the main working folder for development (you will be working in this majority of the time)
+- **`src/` FOLDER:** contains the source code and is the main working folder for development (you will be working in this majority of the time)
 
   - **`App.jsx` FILE:** the root component of the React app - other pages and components are rendered here
 
