@@ -41,6 +41,7 @@ To add / update information about FXA's events, add the following to **"events"*
   cp: "{INSERT IMAGE URL}",
   link: "{INSERT FB EVENT LINK}",
   type: "{INSERT EITHER 'past' OR 'upcoming'}",
+  date: "YEAR-MM-DD"
 },`
 
 EXAMPLE:
@@ -52,6 +53,7 @@ EXAMPLE:
   cp: "../assets/director-recruitment-cp.jpg",
   link: "https://fb.me/e/5nFCgMTuA",
   type: "past",
+  date: "2025-04-08"
 },`
 
 #### Sponsors and Partners Page

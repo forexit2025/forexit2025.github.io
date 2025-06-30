@@ -14,11 +14,11 @@ function EventsPage() {
   const upcoming = events
     .filter((e) => e.type === "upcoming" && e.year === year)
     .filter((e) => e.name.toLowerCase().includes(searchUpcoming.toLowerCase()))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
   const past = events
     .filter((e) => e.type === "past" && e.year === year)
     .filter((e) => e.name.toLowerCase().includes(searchPast.toLowerCase()))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const createEventGrid = (array, type) => {
     return (
