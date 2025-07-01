@@ -15,7 +15,7 @@ export const blogs = [
     authors: [""],
     text: "",
     image: [comingSoonImage],
-  }
+  },
 ];
 
 export const newsletters = [
@@ -33,5 +33,5 @@ export const newsletters = [
     authors: [""],
     text: "",
     image: [comingSoonImage],
-  }
+  },
 ];

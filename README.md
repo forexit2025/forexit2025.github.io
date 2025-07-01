@@ -8,6 +8,60 @@ Welcome to UNSW FOREX Association!
 
 This repo contains the source code for UNSW FXA's website. Work is still in progress...
 
+### Working on the project
+
+**1. Set up the project locally**
+
+In your terminal, run the following:
+
+- `git pull origin main`
+
+- `npm install`
+
+- `npm run dev`
+
+`npm run dev` will produce a link - you can go to this to see the website locally.
+
+**2. Set up your own branch**
+
+- `git checkout -b {name}`
+
+- e.g. `git checkout -b agnes`
+
+We love good GIT practices, so just create one branch named as your name and you can do all the work in this branch.
+
+**3. Pulling updates**
+
+- `git pull origin main`
+
+Before you start working on changes, make sure you are in your own branch and that you have the latest updates from the repo. This avoids any merge conflicts when you are trying to push your code.
+
+**4. Merging changes**
+
+Add your changes to your branch:
+
+- `git add .`
+
+- `git commit -m "{brief commit message}"`
+
+- `git push`
+
+Switch to the main branch and merge the main branch with your branch:
+
+- `git checkout main`
+
+- `git merge {branchname}`
+
+- `git push origin main`
+
+### Deploying
+
+If you make changes and push to main run the following command:
+
+- `npm run deploy`
+
+Give it a couple of minutes, but official the website should display your changes soon.
+
 ### What's in this repo?
 
 - **`src/` FOLDER:** contains the source code and is the main working folder for development (you will be working in this majority of the time)
